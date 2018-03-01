@@ -184,7 +184,7 @@ import { base64Image } from "./base64Image";
         Word.run(function (context) {
             
             const blankParagraph = context.document.body.paragraphs.getLast().insertParagraph("", "After");
-            blankParagraph.insertHtml('<p style="font-family: verdana;">Inserted HTML.</b></p><p>Another paragraph</p>', "End");
+            blankParagraph.insertHtml('<p style="font-family: verdana;">Inserted HTML.</p><p>Another paragraph</p>', "End");
 
             return context.sync();
         })
