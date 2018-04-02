@@ -1,4 +1,4 @@
-# Excel Web Add-in project for use with the Excel Getting Started tutorials
+# Word Web Add-in project for use with the Word Getting Started tutorial
 
 This repo contains the start and end states of a Word Web Add-in tutorial that shows developers how to insert text, images, tables, HTML, and content controls in to documents, specific paragraphs, and specific ranges. It also shows how to replace content in ranges, paragraphs, and content controls.
 
