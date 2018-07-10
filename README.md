@@ -23,13 +23,15 @@ This sample is meant to accompany the tutorials that begin at: [Word Tutorial](h
 Install packages, update npm and the relevant packages as follows:
 * npm install
 * npm install npm@latest -g
-* npm audit
+* npm audit fix
 
 Then compile and run:
 * npm run build
 * npm start
 
 After this, you need to copy the manifest to a place trusted by Word and "sideload" the add-in. Further information via the link above.
+
+You also need to trust the CA certificate in certs/ca.crt, and add it to trusted root certificates, otherwise Word will complain about insecure connections. Word always uses IE as the browser.
 
 ## Additional resources
 

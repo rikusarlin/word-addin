@@ -9,8 +9,8 @@
     },
     "https": 
 	{
-	  "key": "C:\\Users\\03111756\\git\\word-addin\\Start\\certs\\server.key",
-	  "cert": "C:\\Users\\03111756\\git\\word-addin\\Start\\certs\\server.crt"
+	  "key": "certs\\server.key",
+	  "cert": "certs\\server.crt"
 	},
     "watch": true,
     "files": "*.*",
