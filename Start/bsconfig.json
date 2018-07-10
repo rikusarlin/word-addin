@@ -7,7 +7,11 @@
             "/node_modules": "node_modules"
         }
     },
-    "https": true,
+    "https": 
+	{
+	  "key": "C:\\Users\\03111756\\git\\word-addin\\Start\\certs\\server.key",
+	  "cert": "C:\\Users\\03111756\\git\\word-addin\\Start\\certs\\server.crt"
+	},
     "watch": true,
     "files": "*.*",
 	"open": false
