@@ -267,46 +267,46 @@ import { base64Image } from "./base64Image";
         const range = context.document.getSelection();
 		const perusteluLuku = range.insertContentControl();
 		perusteluLuku.title = "Perusteluluku";
-		perusteluLuku.tag = "PerusteluLuku-1";
+		perusteluLuku.tag = "PerusteluLuku";
 		perusteluLuku.appearance = "Tags";
 		perusteluLuku.color = "orange";
-		return context.sync()
-		.then(function() {
-			const luvunOtsikko = context.document.contentControls.getByTag("PerusteluLuku-1").getFirst().getRange().insertContentControl();
-			luvunOtsikko.title = "Luvun otsikko";
-			luvunOtsikko.tag = "LukuOtsikko";
-			luvunOtsikko.appearance = "Tags";
-			luvunOtsikko.color = "purple";
-		})
-		.then(context.sync);
-		        
 
-		/*
-		const otsikonNumero = luvunOtsikko.getRange("Content").insertContentControl();
+		const luvunOtsikko = perusteluLuku.getRange("End").insertContentControl();
+		luvunOtsikko.title = "Luvun otsikko";
+		luvunOtsikko.tag = "LukuOtsikko";
+		luvunOtsikko.appearance = "Tags";
+		luvunOtsikko.color = "purple";
+		        
+		const otsikonNumero = luvunOtsikko.getRange("End").insertContentControl();
 		otsikonNumero.title = "Otsikon numero";
 		otsikonNumero.tag = "OtsikkoNroTeksti";
 		otsikonNumero.appearance = "Tags";
 		otsikonNumero.color = "red";
 		otsikonNumero.style = "Luvun otsikko";
-		const otsikko = luvunOtsikko.getRange("Content").insertContentControl();
+		
+		const otsikko = luvunOtsikko.getRange("End").insertContentControl();
 		otsikko.title = "Otsikko";
 		otsikko.tag = "OtsikkoTeksti";
 		otsikko.appearance = "Tags";
 		otsikko.color = "red";
 		otsikonNumero.style = "Luvun otsikko";
+		
 		const kappale1 = perusteluLuku.getRange("End").insertContentControl();
 		kappale1.title = "Kappale";
 		kappale1.tag = "KappaleKooste";
 		kappale1.appearance = "Tags";
 		kappale1.color = "black";
 		otsikonNumero.style = "Kappaleen teksti";
+		
 		const kappale2 = perusteluLuku.getRange("End").insertContentControl();
 		kappale2.title = "Kappale";
 		kappale2.tag = "KappaleKooste";
 		kappale2.appearance = "Tags";
 		kappale2.color = "black";
 		otsikonNumero.style = "Kappaleen teksti";
-		*/
+		
+		return context.sync();
+
     })
     .catch(function (error) {
         console.log("Error: " + error);
