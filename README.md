@@ -6,6 +6,7 @@ The original contents have been mostly commented out, and content controls relat
 Techlonogies used
 * Node.js
 * npm
+* browser-sync
 * jquery
 * Word Javascript API, mostly content controls
 
